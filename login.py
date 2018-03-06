@@ -1,3 +1,10 @@
+
+
+#login_logout_mutipleUser_muliple_window
+#Login and logout testing for 3 user with 1000 time
+
+
+
 import selenium.webdriver as webdriver
 import selenium.webdriver.support.ui as ui
 from selenium.webdriver.common.keys import Keys
@@ -36,7 +43,7 @@ for driver in drivers.values():
                 driver.switch_to_window(second_window)
 
 
-                for i in range(3):
+                for i in range(100):
                         time.sleep(5)
                         driver.find_element_by_name("userName").click()
                         driver.find_element_by_name("userName").send_keys(values['user1'])
@@ -45,7 +52,7 @@ for driver in drivers.values():
                         driver.find_element_by_name("login").click()
                         driver.find_element_by_link_text("SIGN-OFF").click()
 
-                for j in range(3):
+                for j in range(100):
                     time.sleep(5)
                     driver.find_element_by_name("userName").click()
                     driver.find_element_by_name("userName").send_keys(values['user2'])
@@ -55,7 +62,7 @@ for driver in drivers.values():
                     driver.find_element_by_link_text("SIGN-OFF").click()
 
 
-                for x in range(3):
+                for x in range(100):
                     time.sleep(5)
                     driver.find_element_by_name("userName").click()
                     driver.find_element_by_name("userName").send_keys(values['user3'])
